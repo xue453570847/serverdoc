@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SQL与关系数据库基本操作 | Hello</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="Hello, my friend!">
+    <link rel="preload" href="/assets/css/0.styles.ae176247.css" as="style"><link rel="preload" href="/assets/js/app.2d4b0eee.js" as="script"><link rel="preload" href="/assets/js/2.705226bb.js" as="script"><link rel="preload" href="/assets/js/10.9e439d68.js" as="script"><link rel="prefetch" href="/assets/js/11.aabfa5ec.js"><link rel="prefetch" href="/assets/js/12.68200574.js"><link rel="prefetch" href="/assets/js/13.bd102809.js"><link rel="prefetch" href="/assets/js/14.7f3dd5ce.js"><link rel="prefetch" href="/assets/js/15.138ad12d.js"><link rel="prefetch" href="/assets/js/16.d8f974db.js"><link rel="prefetch" href="/assets/js/17.a9812573.js"><link rel="prefetch" href="/assets/js/18.7fae24b3.js"><link rel="prefetch" href="/assets/js/19.801f1374.js"><link rel="prefetch" href="/assets/js/3.15c0e96d.js"><link rel="prefetch" href="/assets/js/4.7498c97f.js"><link rel="prefetch" href="/assets/js/5.c5ad05a3.js"><link rel="prefetch" href="/assets/js/6.944ca20f.js"><link rel="prefetch" href="/assets/js/7.a9e02bf2.js"><link rel="prefetch" href="/assets/js/8.c4bc056d.js"><link rel="prefetch" href="/assets/js/9.2b464b7f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ae176247.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Hello</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/swiper/" class="nav-link">
+  Swiper
+</a></div><div class="nav-item"><a href="/database/" class="nav-link router-link-active">
+  Database
+</a></div><div class="nav-item"><a href="https://www.xuezsl.com:8080" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/swiper/" class="nav-link">
+  Swiper
+</a></div><div class="nav-item"><a href="/database/" class="nav-link router-link-active">
+  Database
+</a></div><div class="nav-item"><a href="https://www.xuezsl.com:8080" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>数据库系统原理</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/database/" aria-current="page" class="sidebar-link">数据库系统概述</a></li><li><a href="/database/one.html" class="sidebar-link">关系数据库</a></li><li><a href="/database/two.html" class="sidebar-link">数据库设计</a></li><li><a href="/database/three.html" aria-current="page" class="active sidebar-link">SQL与关系数据库基本操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/database/three.html#sql概述" class="sidebar-link">SQL概述</a></li><li class="sidebar-sub-header"><a href="/database/three.html#mysql预备知识" class="sidebar-link">MySQL预备知识</a></li><li class="sidebar-sub-header"><a href="/database/three.html#数据定义" class="sidebar-link">数据定义</a></li><li class="sidebar-sub-header"><a href="/database/three.html#索引定义" class="sidebar-link">索引定义</a></li><li class="sidebar-sub-header"><a href="/database/three.html#数据更新" class="sidebar-link">数据更新</a></li><li class="sidebar-sub-header"><a href="/database/three.html#数据查询" class="sidebar-link">数据查询</a></li><li class="sidebar-sub-header"><a href="/database/three.html#视图" class="sidebar-link">视图</a></li></ul></li><li><a href="/database/four.html" class="sidebar-link">数据库编程</a></li><li><a href="/database/five.html" class="sidebar-link">数据库安全与保护</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="sql与关系数据库基本操作"><a href="#sql与关系数据库基本操作" class="header-anchor">#</a> SQL与关系数据库基本操作</h1> <h2 id="sql概述"><a href="#sql概述" class="header-anchor">#</a> SQL概述</h2> <h4 id="sql发展"><a href="#sql发展" class="header-anchor">#</a> SQL发展</h4> <blockquote><p>1974年由Boyee和Chamberlin提出</p></blockquote> <blockquote><p>最早的SQL标准是在1986年10月由美国国家标准局(American National Standard Insitute,ANSI)颁布，1987年6月正式采纳它为国际标准</p></blockquote> <h4 id="sql的特点"><a href="#sql的特点" class="header-anchor">#</a> SQL的特点</h4> <blockquote><p>SQL不是某个特定数据库提供商专有的语言</p></blockquote> <blockquote><p>SQL简单易学</p></blockquote> <blockquote><p>SQL是一种强有力的语言</p></blockquote> <p>SQL语句不区分大小写</p> <h4 id="sql的组成"><a href="#sql的组成" class="header-anchor">#</a> SQL的组成</h4> <ol><li>数据定义语言(Data Definition Language, DDL)</li> <li>数据库操纵语言(Data Manipulation Language, DML)</li> <li>数据库控制语言(Data Control Language, DCL)</li> <li>嵌入式和动态SQL规则</li> <li>SQL调用和会话规则</li></ol> <hr> <h2 id="mysql预备知识"><a href="#mysql预备知识" class="header-anchor">#</a> MySQL预备知识</h2> <h4 id="一、-mysql使用基础"><a href="#一、-mysql使用基础" class="header-anchor">#</a> 一、 MySQL使用基础</h4> <ol><li>LAMP(Linux + Apache + MySQL + PHP/Perl/Python)</li> <li>WAMP(Windows + Apache + MySQL + PHP/Perl/Python)</li></ol> <h4 id="二、-mysql中的sql"><a href="#二、-mysql中的sql" class="header-anchor">#</a> 二、 MySQL中的SQL</h4> <blockquote><p>SQL-》外模式-》模式-》内模式</p></blockquote> <ol><li>常量
+<ul><li>字符串常量</li> <li>数值常量（分为整数常量和浮点数常量）</li> <li>十六进制</li> <li>日期时间常量</li> <li>位字段符号</li> <li>布尔</li> <li>NULL</li></ul></li> <li>变量
+<ul><li>用户变量</li> <li>系统变量</li></ul></li></ol> <blockquote><p>用户变量前常添加一个‘@’. 例 “set @a=1”</p></blockquote> <blockquote><p>系统变量前添加二个‘@’</p></blockquote> <ol start="3"><li>运算符
+<ul><li>算数运算符
+<ul><li>+，-，*，/,%(求模)</li></ul></li> <li>位运算符
+<ul><li>&amp;(位与),|(位或),^(位异或),~(位取反),&gt;&gt;(位右移=除),&lt;&lt;(位左移=乘)</li></ul></li> <li>比较运算符
+<ul><li>=、&gt;、&lt;、&gt;=、&lt;=、&lt;&gt;(不等于)、!=、&lt;=&gt;(相等或都等于空)</li></ul></li> <li>逻辑运算符
+<ul><li>NOT或!(逻辑非)、AND或&amp;&amp;(逻辑与)、OR或||(逻辑或)、XOR(逻辑异或)
+4.表达式</li></ul></li></ul></li></ol> <blockquote><p>表达式是常量、变量、列名、复杂计算、运算符和函数的组合</p></blockquote> <ol start="5"><li>内置函数
+<ul><li>数学函数
+<ul><li>ABS()、SORT()</li></ul></li> <li>聚合函数
+<ul><li>COUNT()</li></ul></li> <li>字符串函数
+<ul><li>ASCII()、CHAR()</li></ul></li> <li>日期和时间函数
+<ul><li>NOW()、YEAR()</li></ul></li> <li>加密函数
+<ul><li>ENCODE()、ENCRYPT()</li></ul></li> <li>控制流程函数
+<ul><li>IF()、IFNULL()</li></ul></li> <li>格式化函数
+<ul><li>FORMAT()</li></ul></li> <li>类型转换函数
+<ul><li>CAST()</li></ul></li> <li>系统信息函数
+<ul><li>USER()、VERSION()</li></ul></li></ul></li></ol> <hr> <h2 id="数据定义"><a href="#数据定义" class="header-anchor">#</a> 数据定义</h2> <h4 id="数据库模式定义"><a href="#数据库模式定义" class="header-anchor">#</a> 数据库模式定义</h4> <ol><li>创建数据库</li></ol> <div class="language- extra-class"><pre class="language-text"><code>create {database|schema} [if not exists] db_name
+</code></pre></div><ol start="2"><li>选择数据库</li></ol> <div class="language- extra-class"><pre class="language-text"><code>use db_name
+</code></pre></div><ol start="3"><li>修改数据库</li></ol> <div class="language- extra-class"><pre class="language-text"><code>alter {database|schema} [db_bane] 
+</code></pre></div><ol start="4"><li>删除数据库</li></ol> <div class="language- extra-class"><pre class="language-text"><code>drop {database|schema} [if exists] db_name
+</code></pre></div><ol start="5"><li>查看数据库</li></ol> <div class="language- extra-class"><pre class="language-text"><code>show {database|schema}
+</code></pre></div><h4 id="表定义"><a href="#表定义" class="header-anchor">#</a> 表定义</h4> <ol><li>创建表</li></ol> <div class="language- extra-class"><pre class="language-text"><code>create table student 
+(
+sno int not null auto_increment,
+cname char(50)no null,
+primary key(sno)
+)
+</code></pre></div><div class="language- extra-class"><pre><code>- 临时表与持久表
+    - 在创建表create table语句中，若添加temporary关键字，则表示该语句创建的表为临时表
+- 数据类型
+- 关键字 auto_increment
+- 指定默认值
+- NULL值
+- 主键
+    - 主键是通过primary key关键字来指定的
+</code></pre></div><ol start="2"><li>更新表</li></ol> <ul><li>add [column]</li></ul> <div class="language- extra-class"><pre class="language-text"><code>Q: 向数据库musql的表custom插入一列，并命名为city，要求值不能为null，默认为字符串‘whhan’，且位与原表country列之后
+alter table mysql.custom add column city char(10) not null default 'wuhan' after country
+</code></pre></div><ul><li>change [column]</li></ul> <div class="language- extra-class"><pre class="language-text"><code>Q：将数据库musql中的表custom的sex列命名为sexs，且将数据类型更改为字符长度为1的字符数据类型char（1）,允许为null，默认为字符常量'M'
+
+alter table mysql.custom change column sex sexs char(1) null dafault 'm'
+</code></pre></div><ul><li>alter[column]</li></ul> <div class="language- extra-class"><pre class="language-text"><code>Q： 将数据库musql中表custom的city列默认值修改为字符常量‘beijijng’
+
+alter table mysql.custom alter column city set default 'beijing'
+</code></pre></div><ul><li>modify[column]</li></ul> <div class="language- extra-class"><pre class="language-text"><code>q: 将数据库mysql中表custom列数据类型由之前的字符长度为50的定长修改为char(20),并将此列设置为表的第一列
+
+alter table mysql.custom modify column name char(20) first
+</code></pre></div><ul><li>drop[column]</li></ul> <div class="language- extra-class"><pre class="language-text"><code>alter table mysql.custom drop column cust
+</code></pre></div><ul><li>rename[to]</li></ul> <div class="language- extra-class"><pre class="language-text"><code>alter table mysql.custom rename to mysql.test_custom
+</code></pre></div><ol start="3"><li>重命名表</li></ol> <div class="language- extra-class"><pre class="language-text"><code>rename table tab_name to new_name
+</code></pre></div><ol start="4"><li>删除表</li></ol> <div class="language- extra-class"><pre class="language-text"><code>drop table 
+</code></pre></div><ol start="5"><li>查看表</li></ol> <div class="language- extra-class"><pre class="language-text"><code>1. 显示表名称
+show tables
+
+2. 显示表结构
+
+show columns table
+
+</code></pre></div><h2 id="索引定义"><a href="#索引定义" class="header-anchor">#</a> 索引定义</h2> <blockquote><p>按照用途来分。分为普通索引(index)/唯一性索引(unique)/主键(primary)/全文索引/聚簇索引</p></blockquote> <blockquote><p>按照列级索引分为单列索引和组合索引</p></blockquote> <ol><li>索引的创建</li></ol> <div class="language- extra-class"><pre class="language-text"><code>Q: 在数据库mysql的表custom上，根据name列的前三个字符创建一个升序索引index
+1. 使用create index创建索引
+create index index on mysql.custom(name(3) asc)
+
+2. 使用create table创建索引
+3. 使用alter table创建索引
+</code></pre></div><ol start="2"><li>索引的查看</li></ol> <div class="language- extra-class"><pre class="language-text"><code>sow index tablename
+</code></pre></div><ol start="3"><li>索引的删除</li></ol> <div class="language- extra-class"><pre class="language-text"><code>1. 使用drop index语句删除索引
+drop index id on mysql
+
+2. 使用alter table语句删除索引
+
+alter table mysql drop index  id
+</code></pre></div><hr> <h2 id="数据更新"><a href="#数据更新" class="header-anchor">#</a> 数据更新</h2> <h4 id="插入数据"><a href="#插入数据" class="header-anchor">#</a> 插入数据</h4> <ol><li>insert ---values</li></ol> <div class="language- extra-class"><pre class="language-text"><code>insert into mysql value('zhangsan', 18, 女)
+</code></pre></div><ol start="2"><li>insert ----set</li></ol> <div class="language- extra-class"><pre class="language-text"><code>insert into mysql set name='zhangsan',age=18,sex='女'
+</code></pre></div><ol start="3"><li>insert---select</li></ol> <div class="language- extra-class"><pre class="language-text"><code>insert into tab1 select tab2
+</code></pre></div><h4 id="删除数据"><a href="#删除数据" class="header-anchor">#</a> 删除数据</h4> <div class="language- extra-class"><pre class="language-text"><code>delete from table
+</code></pre></div><h4 id="修改数据"><a href="#修改数据" class="header-anchor">#</a> 修改数据</h4> <div class="language- extra-class"><pre class="language-text"><code>update table set age='12' whter name='zhangsan'
+</code></pre></div><hr> <h2 id="数据查询"><a href="#数据查询" class="header-anchor">#</a> 数据查询</h2> <h4 id="select语句"><a href="#select语句" class="header-anchor">#</a> select语句</h4> <div class="language- extra-class"><pre class="language-text"><code>SELECT column_name,column_name
+FROM table_name
+[WHERE Clause]
+[LIMIT N][ OFFSET M]
+</code></pre></div><h4 id="列的选择与指定"><a href="#列的选择与指定" class="header-anchor">#</a> 列的选择与指定</h4> <ol><li>选择指定的列</li></ol> <div class="language- extra-class"><pre class="language-text"><code>select name,age from student
+</code></pre></div><ol start="2"><li>定义并使用列的别名</li></ol> <div class="language- extra-class"><pre class="language-text"><code>select name as '名字',age as '年龄' from student
+</code></pre></div><ol start="3"><li>替换查询结果集中的数据</li></ol> <div class="language- extra-class"><pre class="language-text"><code>select student
+case
+when age=18 then 15
+else 99 
+end as '年龄' 
+from student
+</code></pre></div><ol start="4"><li>计算列值</li></ol> <div class="language- extra-class"><pre class="language-text"><code>select name,age+10 form student
+</code></pre></div><ol start="5"><li>聚合函数</li></ol> <table><thead><tr><th>函数名</th> <th>说明</th></tr></thead> <tbody><tr><td>count</td> <td>求组中的函数，返回int类型整数</td></tr> <tr><td>max</td> <td>求最大值</td></tr> <tr><td>min</td> <td>求最小值</td></tr> <tr><td>sum</td> <td>返回表达式中所有值的和</td></tr> <tr><td>avg</td> <td>求组中值的平均值</td></tr> <tr><td>sid或stddev</td> <td>返回给定表达式中所有值的标准值</td></tr> <tr><td>variance</td> <td>返回给定表达式中所有值的方差</td></tr> <tr><td>group_concat</td> <td>返回由属于一组的列值连接组合而成的结果</td></tr> <tr><td>bit_and</td> <td>逻辑或</td></tr> <tr><td>bir_or</td> <td>逻辑与</td></tr> <tr><td>bit_xor</td> <td>逻辑异或</td></tr></tbody></table> <h4 id="from字句与多表连接查询"><a href="#from字句与多表连接查询" class="header-anchor">#</a> from字句与多表连接查询</h4> <ol><li>交叉连接</li></ol> <div class="language- extra-class"><pre class="language-text"><code>select * from tab1 cross join tab2
+</code></pre></div><ol start="2"><li>内连接</li></ol> <div class="language- extra-class"><pre class="language-text"><code>select colume(指定检索的列) from tab1 inner join tab2 on some(事先设定好的连接条件)
+</code></pre></div><ul><li>等值连接</li></ul> <blockquote><p>inner join 或者 join</p></blockquote> <ul><li>非等值连接</li> <li>自连接</li></ul> <ol start="3"><li>外连接</li></ol> <ul><li>左外连接</li></ul> <blockquote><p>from字句使用关键字left outer join 或关键字left join 替换原有的inner join或join</p></blockquote> <ul><li>右外连接</li></ul> <blockquote><p>right outer join 或关键字 right join</p></blockquote> <h4 id="where子句与条件查询"><a href="#where子句与条件查询" class="header-anchor">#</a> where子句与条件查询</h4> <table><thead><tr><th>查询条件</th> <th>操作符</th></tr></thead> <tbody><tr><td>比较</td> <td>=,&lt;&gt;,!=,&lt;=,&gt;,&gt;=,!&lt;,!&gt; not+比较运算符表达式</td></tr> <tr><td>确定范围</td> <td>between ** and   not between and</td></tr> <tr><td>确定集合</td> <td>in  not in</td></tr> <tr><td>字符匹配</td> <td>like, note like</td></tr> <tr><td>空值</td> <td>is null, is not null</td></tr> <tr><td>多重条件</td> <td>and,or</td></tr></tbody></table> <ol start="4"><li>子查询</li></ol> <blockquote><p>可嵌套在其他select查询中的select查询</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>q: 查询所选课程成绩大于80分的学生学号和姓名
+select sno,sname from student where sno in(select sno from score where score&gt;80)
+</code></pre></div><h4 id="group-by"><a href="#group-by" class="header-anchor">#</a> group by</h4> <div class="language- extra-class"><pre class="language-text"><code>select adderss,sex from test group by adress,sex
+</code></pre></div><h4 id="having"><a href="#having" class="header-anchor">#</a> having</h4> <div class="language- extra-class"><pre class="language-text"><code>having test 
+</code></pre></div><h4 id="order-by"><a href="#order-by" class="header-anchor">#</a> order by</h4> <div class="language- extra-class"><pre class="language-text"><code>select name,sex from test order by name desc,sex asc
+</code></pre></div><h4 id="limit"><a href="#limit" class="header-anchor">#</a> limit</h4> <div class="language- extra-class"><pre class="language-text"><code>limit 3
+</code></pre></div><hr> <h2 id="视图"><a href="#视图" class="header-anchor">#</a> 视图</h2> <blockquote><p>视图是从一个或多个表或者其他视图中通过查询语句导出的表</p></blockquote> <blockquote><p>视图不是数据库中真实的表，而是一张虚拟表</p></blockquote> <h4 id="创建视图"><a href="#创建视图" class="header-anchor">#</a> 创建视图</h4> <div class="language- extra-class"><pre class="language-text"><code>create or replace view test as seelct * from student where sex='m' whth check option
+</code></pre></div><h4 id="删除视图"><a href="#删除视图" class="header-anchor">#</a> 删除视图</h4> <div class="language- extra-class"><pre class="language-text"><code>drop view [if exists] view_name
+</code></pre></div><h4 id="修改视图定义"><a href="#修改视图定义" class="header-anchor">#</a> 修改视图定义</h4> <div class="language- extra-class"><pre class="language-text"><code>alter view view_name as select * from test
+</code></pre></div><h4 id="查看视图定义"><a href="#查看视图定义" class="header-anchor">#</a> 查看视图定义</h4> <div class="language- extra-class"><pre class="language-text"><code>show create view view_name
+</code></pre></div><h4 id="更新视图数据"><a href="#更新视图数据" class="header-anchor">#</a> 更新视图数据</h4> <div class="language- extra-class"><pre class="language-text"><code>insert into test value(909)
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>update test set number=808
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>delete from test where number=909
+</code></pre></div><h4 id="查询视图数据"><a href="#查询视图数据" class="header-anchor">#</a> 查询视图数据</h4> <div class="language- extra-class"><pre class="language-text"><code>select name,adress from view_name where id=808
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/database/two.html" class="prev">
+        数据库设计
+      </a></span> <span class="next"><a href="/database/four.html">
+        数据库编程
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2d4b0eee.js" defer></script><script src="/assets/js/2.705226bb.js" defer></script><script src="/assets/js/10.9e439d68.js" defer></script>
+  </body>
+</html>
