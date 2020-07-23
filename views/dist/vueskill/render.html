@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>render函数 | Hello</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="Hello, my friend!">
+    <link rel="preload" href="/assets/css/0.styles.ae176247.css" as="style"><link rel="preload" href="/assets/js/app.0546edb6.js" as="script"><link rel="preload" href="/assets/js/2.705226bb.js" as="script"><link rel="preload" href="/assets/js/28.062ff039.js" as="script"><link rel="prefetch" href="/assets/js/10.9e439d68.js"><link rel="prefetch" href="/assets/js/11.1b226cf0.js"><link rel="prefetch" href="/assets/js/12.38c3b1a6.js"><link rel="prefetch" href="/assets/js/13.a998d9ed.js"><link rel="prefetch" href="/assets/js/14.fe8355a2.js"><link rel="prefetch" href="/assets/js/15.43db0993.js"><link rel="prefetch" href="/assets/js/16.8b1529eb.js"><link rel="prefetch" href="/assets/js/17.a7e9dce6.js"><link rel="prefetch" href="/assets/js/18.d1a6cc65.js"><link rel="prefetch" href="/assets/js/19.5deabdc6.js"><link rel="prefetch" href="/assets/js/20.f06f02a7.js"><link rel="prefetch" href="/assets/js/21.dc820b9d.js"><link rel="prefetch" href="/assets/js/22.b989ae5f.js"><link rel="prefetch" href="/assets/js/23.eada9f7e.js"><link rel="prefetch" href="/assets/js/24.887cb6da.js"><link rel="prefetch" href="/assets/js/25.490aebc8.js"><link rel="prefetch" href="/assets/js/26.a2659ee0.js"><link rel="prefetch" href="/assets/js/27.d743b912.js"><link rel="prefetch" href="/assets/js/29.42480b13.js"><link rel="prefetch" href="/assets/js/3.e7736b8e.js"><link rel="prefetch" href="/assets/js/4.7498c97f.js"><link rel="prefetch" href="/assets/js/5.bfe097fd.js"><link rel="prefetch" href="/assets/js/6.14afed8d.js"><link rel="prefetch" href="/assets/js/7.57eed9c6.js"><link rel="prefetch" href="/assets/js/8.8d5bee32.js"><link rel="prefetch" href="/assets/js/9.f23dc594.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ae176247.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Hello</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/swiper/" class="nav-link">
+  Swiper
+</a></div><div class="nav-item"><a href="/database/" class="nav-link">
+  Database
+</a></div><div class="nav-item"><a href="/vueskill/" class="nav-link router-link-active">
+  Vue
+</a></div><div class="nav-item"><a href="https://www.xuezsl.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/swiper/" class="nav-link">
+  Swiper
+</a></div><div class="nav-item"><a href="/database/" class="nav-link">
+  Database
+</a></div><div class="nav-item"><a href="/vueskill/" class="nav-link router-link-active">
+  Vue
+</a></div><div class="nav-item"><a href="https://www.xuezsl.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>vue开发技巧</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vueskill/" aria-current="page" class="sidebar-link">require.context()</a></li><li><a href="/vueskill/message.html" class="sidebar-link">组件通讯</a></li><li><a href="/vueskill/render.html" aria-current="page" class="active sidebar-link">render函数</a></li><li><a href="/vueskill/actioncomponent.html" class="sidebar-link">动态组件</a></li><li><a href="/vueskill/mixins.html" class="sidebar-link">mixins</a></li><li><a href="/vueskill/filter.html" class="sidebar-link">Vue.filter</a></li><li><a href="/vueskill/router.html" class="sidebar-link">全局路由</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>深入</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vueskill/diff.html" class="sidebar-link">diff算法</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="render函数"><a href="#render函数" class="header-anchor">#</a> render函数</h1> <p>场景:有些代码在 template 里面写会重复很多</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 根据 props 生成标签</span>
+<span class="token comment">// 初级</span>
+<span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div v<span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">&quot;level === 1&quot;</span><span class="token operator">&gt;</span> <span class="token operator">&lt;</span>slot<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>slot<span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p v<span class="token operator">-</span><span class="token keyword">else</span><span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">&quot;level === 2&quot;</span><span class="token operator">&gt;</span> <span class="token operator">&lt;</span>slot<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>slot<span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h1 v<span class="token operator">-</span><span class="token keyword">else</span><span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">&quot;level === 3&quot;</span><span class="token operator">&gt;</span> <span class="token operator">&lt;</span>slot<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>slot<span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h2 v<span class="token operator">-</span><span class="token keyword">else</span><span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">&quot;level === 4&quot;</span><span class="token operator">&gt;</span> <span class="token operator">&lt;</span>slot<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>slot<span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>strong v<span class="token operator">-</span><span class="token keyword">else</span><span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">&quot;level === 5&quot;</span><span class="token operator">&gt;</span> <span class="token operator">&lt;</span>slot<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>slot<span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>stong<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>textarea v<span class="token operator">-</span><span class="token keyword">else</span><span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">&quot;level === 6&quot;</span><span class="token operator">&gt;</span> <span class="token operator">&lt;</span>slot<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>slot<span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>textarea<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+
+<span class="token comment">// 优化版,利用 render 函数减小了代码重复率</span>
+<span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>child <span class="token operator">:</span>level<span class="token operator">=</span><span class="token string">&quot;level&quot;</span><span class="token operator">&gt;</span>Hello world<span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>child<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">'text/javascript'</span><span class="token operator">&gt;</span>
+  <span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+  Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'child'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token parameter">h</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> tag <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'div'</span><span class="token punctuation">,</span> <span class="token string">'p'</span><span class="token punctuation">,</span> <span class="token string">'strong'</span><span class="token punctuation">,</span> <span class="token string">'h1'</span><span class="token punctuation">,</span> <span class="token string">'h2'</span><span class="token punctuation">,</span> <span class="token string">'textarea'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>level<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+      <span class="token keyword">return</span> <span class="token function">h</span><span class="token punctuation">(</span>tag<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$slots<span class="token punctuation">.</span>default<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    props<span class="token operator">:</span> <span class="token punctuation">{</span>
+      level<span class="token operator">:</span> <span class="token punctuation">{</span>  type<span class="token operator">:</span> Number<span class="token punctuation">,</span>  required<span class="token operator">:</span> <span class="token boolean">true</span>  <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>   
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'hehe'</span><span class="token punctuation">,</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token punctuation">{</span> level<span class="token operator">:</span> <span class="token number">3</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+
+
+
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">提示</p> <p>render 和 template 的对比 前者适合复杂逻辑,后者适合逻辑简单; 后者属于声明是渲染，前者属于自定Render函数; 前者的性能较高，后者性能较低。</p></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vueskill/message.html" class="prev">
+        组件通讯
+      </a></span> <span class="next"><a href="/vueskill/actioncomponent.html">
+        动态组件
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0546edb6.js" defer></script><script src="/assets/js/2.705226bb.js" defer></script><script src="/assets/js/28.062ff039.js" defer></script>
+  </body>
+</html>
